@@ -11,8 +11,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #f0f0f0; /*
-            background="Meisterschale.jpg" Hintergrundfarbe */
+            background-color: #f0f0f0; /* Hintergrundfarbe */
         }
 
         header {
@@ -145,6 +144,7 @@
                         <td>19/20</td>
                         <td>🏆 Jonathan</td>
                     </tr>
+                    <tbody>
                     <tr>
                         <td>18/19</td>
                         <td>🏆 Jonathan</td>
@@ -177,24 +177,24 @@
                 </thead>
                 <tbody>
                     <tr class="winner">
-                        <td class="highlight">🏆 Aaron</td>
+                        <td class="highlight">🥇 Aaron</td>
                         <td class="highlight-number">4</td>
                     </tr>
                     <tr>
-                        <td class="highlight">🏆 Jonathan</td>
+                        <td class="highlight">🥈 Jonathan</td>
                         <td class="highlight-number">2</td>
                     </tr>
                     <tr>
-                        <td class="highlight">🏆 Titus</td>
+                        <td class="highlight">🥉 Titus</td>
                         <td class="highlight-number">1</td>
                     </tr>
                     <tr>
-                        <td class="highlight">🏆 Noa</td>
-                        <td class="highlight-number">1</td>
+                        <td>Emilian</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td class="highlight">🏆 Emilian</td>
-                        <td class="highlight-number">1</td>
+                        <td>Noa</td>
+                        <td>1</td>
                     </tr>
                 </tbody>
             </table>
@@ -210,7 +210,6 @@
 
             document.querySelector(".rekordsieger").addEventListener("click", function() {
                 document.getElementById("rekordsieger-table").style.display = "table";
-                document.getElementById("tippsieger-tabledocument.getElementById("rekordsieger-table").style.display = "table";
                 document.getElementById("tippsieger-table").style.display = "none";
             });
         });

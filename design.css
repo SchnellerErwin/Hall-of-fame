@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('Meisterschale.jpg'); /* Hintergrundbild */
+    background-size: cover; /* Hintergrundbild skalieren */
+    background-repeat: no-repeat; /* Hintergrundbild nicht wiederholen */
+    background-position: center; /* Hintergrundbild zentrieren */
+}
