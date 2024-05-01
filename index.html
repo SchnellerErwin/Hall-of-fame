@@ -18,10 +18,6 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        .logo {
-            width: 150px;
-            margin-bottom: 20px;
-        }
         .title {
             font-size: 36px;
             text-transform: uppercase;
@@ -34,10 +30,6 @@
         }
         .link:hover {
             text-decoration: underline;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
         }
         .section {
             margin-bottom: 40px;
@@ -81,9 +73,12 @@
             line-height: 1;
             vertical-align: middle;
         }
-        .hall-of-fame, .rekordsieger {
-            font-family: "Times New Roman", Times, serif; /* Andere Schriftart */
-            font-size: 24px; /* Gleiche Schriftgröße wie TG??? */
+        .hall-of-fame, .rekordsieger, .tg {
+            font-size: 36px; /* Gleiche Schriftgröße wie TG??? */
+            text-transform: uppercase;
+            background-color: #2a9d8f; /* Grüner Balken */
+            padding: 10px 0;
+            color: #fff;
             margin-bottom: 20px;
         }
     </style>
@@ -93,15 +88,16 @@
     <!-- Logo -->
     <header>
         <h1 class="title">TG???</h1>
-        <hr>
-        <a href="#tippsieger-table" class="link">Hall of Fame</a>
-        <a href="#rekordsieger-table" class="link">Rekordsieger</a>
-        <hr>
     </header>
 
     <main>
         <div class="section">
-            <h2 class="hall-of-fame">Hall of Fame</h2>
+            <a href="#tippsieger-table" class="link hall-of-fame">Hall of Fame</a>
+            <hr>
+            <a href="#rekordsieger-table" class="link rekordsieger">Rekordsieger</a>
+        </div>
+
+        <div class="section">
             <table id="tippsieger-table">
                 <thead>
                     <tr>
@@ -147,7 +143,6 @@
         </div>
 
         <div class="section">
-            <h2 class="rekordsieger">Rekordsieger</h2>
             <table id="rekordsieger-table">
                 <thead>
                     <tr>
@@ -180,26 +175,6 @@
             </table>
         </div>
     </main>
-
-    <script>
-        // JavaScript, um die Tabellen je nach Klick auf die Links anzuzeigen
-        const hallOfFameLink = document.querySelector('.link[href="#tippsieger-table"]');
-        const rekordsiegerLink = document.querySelector('.link[href="#rekordsieger-table"]');
-        const hallOfFameTable = document.getElementById('tippsieger-table');
-        const rekordsiegerTable = document.getElementById('rekordsieger-table');
-
-        hallOfFameLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            hallOfFameTable.style.display = 'table';
-            rekordsiegerTable.style.display = 'none';
-        });
-
-        rekordsiegerLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            rekordsiegerTable.style.display = 'table';
-            hallOfFameTable.style.display = 'none';
-        });
-    </script>
 
 </body>
 </html>
