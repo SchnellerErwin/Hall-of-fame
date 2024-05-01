@@ -10,8 +10,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* Weiß */
-            color: #333;
             line-height: 1.6;
         }
         header {
@@ -21,11 +19,29 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 36px;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+        .link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
         main {
             padding: 20px;
             text-align: center;
         }
         table {
+            display: none;
             border-collapse: collapse;
             width: 80%;
             margin: 0 auto 30px; /* Zentriert */
@@ -57,17 +73,15 @@
             line-height: 1;
             vertical-align: middle;
         }
-        .logo {
-            width: 150px;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
 
     <!-- Logo -->
     <header>
-        <h1>TG???</h1>
+        <h1 class="title">TG???</h1>
+        <a href="#tippsieger-table" class="link">Hall of Fame</a>
+        <a href="#rekordsieger-table" class="link">Rekordsieger</a>
     </header>
 
     <main>
@@ -145,6 +159,26 @@
             </tbody>
         </table>
     </main>
+
+    <script>
+        // JavaScript, um die Tabellen je nach Klick auf die Links anzuzeigen
+        const hallOfFameLink = document.querySelector('.link[href="#tippsieger-table"]');
+        const rekordsiegerLink = document.querySelector('.link[href="#rekordsieger-table"]');
+        const hallOfFameTable = document.getElementById('tippsieger-table');
+        const rekordsiegerTable = document.getElementById('rekordsieger-table');
+
+        hallOfFameLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            hallOfFameTable.style.display = 'table';
+            rekordsiegerTable.style.display = 'none';
+        });
+
+        rekordsiegerLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            rekordsiegerTable.style.display = 'table';
+            hallOfFameTable.style.display = 'none';
+        });
+    </script>
 
 </body>
 </html>
