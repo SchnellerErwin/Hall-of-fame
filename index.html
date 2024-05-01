@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hall of Fame - Tippsieger</title>
     <style>
+        /* Allgemeine Stildefinitionen */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,6 +13,7 @@
             line-height: 1.6;
             background-color: #f0f0f0; /* Hintergrundfarbe */
         }
+
         header {
             background-color: #2a9d8f; /* Header Hintergrundfarbe */
             color: #fff;
@@ -19,28 +21,34 @@
             text-align: center;
             margin-bottom: 20px;
         }
+
         .title {
             font-size: 36px;
             text-transform: uppercase;
             margin-top: 0;
         }
+
         .link {
             color: #fff;
             text-decoration: none;
             margin: 0 20px;
         }
+
         .link:hover {
             text-decoration: underline;
         }
+
         .section {
             margin-bottom: 40px;
         }
+
         hr {
             border: none;
             border-top: 2px solid #2a9d8f; /* Grüne Linie */
             margin: 20px auto;
             width: 50%;
         }
+
         table {
             display: none;
             border-collapse: collapse;
@@ -50,20 +58,24 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         th, td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #dee2e6;
         }
+
         th {
             background-color: #2a9d8f; /* Tabellenüberschrift Hintergrundfarbe */
             color: #fff;
             text-transform: uppercase;
         }
+
         .highlight {
             color: #333; /* Schwarz */
             font-weight: bold;
         }
+
         .highlight-number {
             color: #fff; /* Weiß */
             border: 2px solid #2a9d8f; /* Grün */
@@ -74,6 +86,7 @@
             line-height: 1;
             vertical-align: middle;
         }
+
         .hall-of-fame, .rekordsieger, .tg {
             font-size: 36px; /* Gleiche Schriftgröße wie TG??? */
             text-transform: uppercase;
@@ -83,6 +96,10 @@
             margin-bottom: 20px;
             text-align: center; /* Zentriert */
             display: block; /* Als Blockelement rendern */
+        }
+
+        .winner {
+            background-color: gold; /* Siegerpodest Hintergrundfarbe */
         }
     </style>
 </head>
@@ -94,12 +111,14 @@
     </header>
 
     <main>
+        <!-- Abschnitt mit Hall of Fame und Rekordsieger -->
         <div class="section">
             <a href="#tippsieger-table" class="link hall-of-fame">Hall of Fame</a>
             <hr>
             <a href="#rekordsieger-table" class="link rekordsieger">Rekordsieger</a>
         </div>
 
+        <!-- Tabelle Tippsieger -->
         <div class="section">
             <table id="tippsieger-table">
                 <thead>
@@ -146,6 +165,7 @@
             </table>
         </div>
 
+        <!-- Tabelle Rekordsieger -->
         <div class="section">
             <table id="rekordsieger-table">
                 <thead>
@@ -155,7 +175,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="winner">
                         <td class="highlight">🏆 Aaron</td>
                         <td class="highlight-number">4</td>
                     </tr>
@@ -182,22 +202,17 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
-            document.querySelector('.hall-of-fame').addEventListener('click', function() {
-                document.getElementById('tippsieger-table').style.display = 'table';
-                document.getElementById('rekordsieger-table').style.display = 'none';
+            document.querySelector(".hall-of-fame").addEventListener("click", function() {
+                document.getElementById("tippsieger-table").style.display = "table";
+                document.getElementById("rekordsieger-table").style.display = "none";
             });
 
-            document.querySelector('.rekordsieger').addEventListener('click', function() {
-                document.getElementById('tippsieger-table').style.display = 'none';
-                document.getElementById('rekordsieger-table').style.display = 'table';
-            });
-
-            document.querySelector('.tg').addEventListener('click', function() {
-                document.getElementById('tippsieger-table').style.display = 'none';
-                document.getElementById('rekordsieger-table').style.display = 'none';
+            document.querySelector(".rekordsieger").addEventListener("click", function() {
+                document.getElementById("rekordsieger-table").style.display = "table";
+                document.getElementById("tippsieger-tabledocument.getElementById("rekordsieger-table").style.display = "table";
+                document.getElementById("tippsieger-table").style.display = "none";
             });
         });
     </script>
-
 </body>
 </html>
